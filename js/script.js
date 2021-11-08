@@ -114,25 +114,25 @@ const iconsData = [
 ];
 
 
-// unisco insieme le parti di dati che creano la classe che identifica la singola icona
-let classArray = iconsData.map((icona) => {
-    return `${icona.family} ${icona.prefix}${icona.name}`
-});
-
-console.log(classArray);
-
 // selettore dove inserire le icone 
 const listCont = document.querySelector('.icons-list');
 
-// inserisco le icone in pagina utilizzando la classe creata unendo i dati e la classe per il colore 
-for (let i = 0; i < iconsData.length; i++) {
-    let {name} = iconsData[i];
-    listCont.innerHTML += `
-    <div class="icon-cont">
-        <div class="icon ${iconsData[i].color} ${iconsData[i].type}">
-            <i class="${classArray[i]}"></i>
+
+// ciclo che inserisce le icone in pagina 
+iconsData.forEach((element) => {
+        
+        let {name} = element;
+
+        listCont.innerHTML += `
+        <div class="icon-cont">
+        <div class="icon ${element.color} ${element.type}">
+            <i class="${element.family} ${element.prefix}${element.name}"></i>
         </div>
         ${name.toUpperCase()}
-    </div>
-    `;
-};
+        </div>
+        `
+    }
+);
+
+const iconSelector = document.getElementById('icons-selector');
+
