@@ -125,13 +125,14 @@ console.log(classArray);
 const listCont = document.querySelector('.icons-list');
 
 // inserisco le icone in pagina utilizzando la classe creata unendo i dati e la classe per il colore 
-for (let i = 0; i < classArray.length; i++) {
+for (let i = 0; i < iconsData.length; i++) {
+    let {name} = iconsData[i];
     listCont.innerHTML += `
     <div class="icon-cont">
         <div class="icon ${iconsData[i].color} ${iconsData[i].type}">
             <i class="${classArray[i]}"></i>
         </div>
-        CAT
+        ${name.toUpperCase()}
     </div>
     `;
 };
