@@ -121,11 +121,11 @@ const listCont = document.querySelector('.icons-list');
 // ciclo che inserisce le icone in pagina, utilizzo i dati delle chiavi per creare le classi delle icone
 iconsData.forEach((element) => {
         
-        // vaaribile per poter poi mettere il nome dell'icona in maiuscolo
+        // varibile per poter poi mettere il nome dell'icona in maiuscolo
         let {name} = element;
 
         listCont.innerHTML += `
-        <div class="icon-cont  ${element.type}">
+        <div class="icon-cont ${element.type}">
         <div class="icon ${element.color}">
             <i class="${element.family} ${element.prefix}${element.name}"></i>
         </div>
@@ -154,28 +154,28 @@ iconSelector.addEventListener('change',
         } else if (userSelect == 'animal') {
             // se il valore è 'animal' tutti i contenitori che non hanno classe 'animal' spariscono 
             contList.forEach((element) => {
-                if (!element.classList.contains('animal')) {
-                    element.classList.add('hidden')
-                } else {
+                if (element.classList.contains('animal')) {
                     element.classList.remove('hidden')
+                } else {
+                    element.classList.add('hidden')
                 }
             });
         } else if (userSelect == 'vegetable') {
             // se il valore è 'vegetable' tutti i contenitori che non hanno classe 'vegetable' spariscono 
             contList.forEach((element) => {
-                if (!element.classList.contains('vegetable')) {
-                    element.classList.add('hidden')
-                } else {
+                if (element.classList.contains('vegetable')) {
                     element.classList.remove('hidden')
+                } else {
+                    element.classList.add('hidden')
                 }
             });
         } else if (userSelect == 'user') {
             contList.forEach((element) => {
             // se il valore è 'user' tutti i contenitori che non hanno classe 'user' spariscono 
-                if (!element.classList.contains('user')) {
-                    element.classList.add('hidden')
-                } else {
+                if (element.classList.contains('user')) {
                     element.classList.remove('hidden')
+                } else {
+                    element.classList.add('hidden')
                 }
             });
         }
