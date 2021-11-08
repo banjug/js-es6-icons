@@ -128,7 +128,7 @@ const listCont = document.querySelector('.icons-list');
 for (let i = 0; i < classArray.length; i++) {
     listCont.innerHTML += `
     <div class="icon-cont">
-        <div class="icon ${iconsData[i].color}">
+        <div class="icon ${iconsData[i].color} ${iconsData[i].type}">
             <i class="${classArray[i]}"></i>
         </div>
         CAT
