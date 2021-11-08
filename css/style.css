@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    background-color: chartreuse;
+}
+
+.icon-cont {
+    width: calc((100% / 5) - 60px);
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
